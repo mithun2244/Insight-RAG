@@ -1,6 +1,6 @@
-# 🗞️ News Research Tool
+# 🗞️ InsightRAG
 
-**News Research Tool** is a premium AI system for effortless information retrieval across news articles. Paste in article URLs, ask questions in natural language, and receive concise, sourced answers — powered by **NVIDIA AI Endpoints**.
+**InsightRAG** is a premium AI system for effortless information retrieval across news articles. Paste in article URLs, ask questions in natural language, and receive concise, sourced answers — powered by **NVIDIA AI Endpoints**.
 
 Built for speed and clarity, the tool combines state-of-the-art large language models with fast semantic search to turn scattered news content into instant, cited insights.
 
@@ -20,7 +20,7 @@ Built for speed and clarity, the tool combines state-of-the-art large language m
 
 A clean, premium Streamlit dashboard with animated status steps, live processing metrics, and card-style answers:
 
-![News Research Tool UI](docs/app_screenshot.png)
+![InsightRAG UI](docs/app_screenshot.png)
 
 <!-- Drop your application screenshot at docs/app_screenshot.png (or update the path above). -->
 
@@ -102,5 +102,4 @@ Example news articles to try:
 
 ## 👤 Author
 
-**Mithun Roy**
-AI and Machine Learning Engineer
+System architecture designed and built by **Mithun Roy**, AI and Machine Learning Engineer.

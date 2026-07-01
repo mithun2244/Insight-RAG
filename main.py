@@ -15,7 +15,7 @@ load_dotenv()  # take environment variables from .env (especially nvidia api key
 # Page configuration
 # ---------------------------------------------------------------------------
 st.set_page_config(
-    page_title="News Research Tool",
+    page_title="InsightRAG",
     page_icon="🗞️",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -25,7 +25,7 @@ st.set_page_config(
 # Header layout
 # ---------------------------------------------------------------------------
 with st.container():
-    st.markdown("# 🗞️ News Research Tool")
+    st.markdown("# 🗞️ InsightRAG")
     st.markdown(
         "#### Ask questions across multiple news articles and get sourced, "
         "AI-generated answers."
