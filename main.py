@@ -91,7 +91,7 @@ for i in range(3):
 process_url_clicked = st.sidebar.button("Process URLs", type="primary", use_container_width=True)
 file_path = "faiss_store.pkl"
 
-llm = ChatNVIDIA(model="meta/llama3-8b-instruct", temperature=0.9, max_tokens=500)
+llm = ChatNVIDIA(model="meta/llama-3.3-70b-instruct", temperature=0.9, max_tokens=500)
 
 # ---------------------------------------------------------------------------
 # Processing pipeline

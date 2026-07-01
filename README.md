@@ -11,7 +11,7 @@ Built for speed and clarity, the tool combines state-of-the-art large language m
 - Load one or more article URLs to fetch and process content.
 - Extract clean article text robustly with `requests` + `trafilatura` (browser User-Agent to bypass basic bot-blocking, with graceful per-URL failure reporting).
 - Construct embedding vectors using **NVIDIA Embeddings (`NV-Embed-QA`)** and leverage **FAISS**, a powerful similarity search library, for swift and effective retrieval of relevant information.
-- Interact with the **NVIDIA-hosted `meta/llama3-8b-instruct` LLM** by inputting queries and receiving answers along with source URLs.
+- Interact with the **NVIDIA-hosted `meta/llama-3.3-70b-instruct` LLM** by inputting queries and receiving answers along with source URLs.
 - Enjoy a modern dashboard with animated progress indicators, processing metrics, and clean card-style answer presentation.
 
 ---
@@ -28,7 +28,7 @@ A clean, premium Streamlit dashboard with animated status steps, live processing
 
 ## 🛠️ Tech Stack
 
-- **LLM:** NVIDIA AI Endpoints — `meta/llama3-8b-instruct` (via `ChatNVIDIA`)
+- **LLM:** NVIDIA AI Endpoints — `meta/llama-3.3-70b-instruct` (via `ChatNVIDIA`)
 - **Embeddings:** NVIDIA — `NV-Embed-QA` (via `NVIDIAEmbeddings`)
 - **Framework:** LangChain
 - **Vector Store:** FAISS
