@@ -1,21 +1,8 @@
 # 🗞️ News Research Tool
 
-**News Research Tool** is a user-friendly application for effortless information retrieval across news articles. Paste in article URLs, ask questions in natural language, and receive concise, sourced answers — now supercharged by **NVIDIA AI Endpoints**.
+**News Research Tool** is a premium AI system for effortless information retrieval across news articles. Paste in article URLs, ask questions in natural language, and receive concise, sourced answers — powered by **NVIDIA AI Endpoints**.
 
-> ⚡ **New system upgrade:** This project has migrated from OpenAI to **NVIDIA AI Endpoints**, using the **`meta/llama3-8b-instruct`** model for generation and **NVIDIA Embeddings (`NV-Embed-QA`)** for semantic search — paired with a redesigned, premium Streamlit dashboard.
-
----
-
-## 🎨 Interface Transformation
-
-The UI has been completely redesigned for a cleaner, more premium experience. See the before and after below:
-
-| Old UI | New UI |
-|:------:|:------:|
-| _<!-- Drop your OLD UI screenshot here, e.g. ![Old UI](docs/old_ui.png) -->_ | _<!-- Drop your NEW UI screenshot here, e.g. ![New UI](docs/new_ui.png) -->_ |
-| **Before** — basic layout, plain text status | **After** — animated status steps, success metrics & card-style answers |
-
-> 💡 Tip: Add your images to a `docs/` folder (or the project root) and replace the placeholder comments above with `![Old UI](path)` and `![New UI](path)`.
+Built for speed and clarity, the tool combines state-of-the-art large language models with fast semantic search to turn scattered news content into instant, cited insights.
 
 ---
 
@@ -26,6 +13,16 @@ The UI has been completely redesigned for a cleaner, more premium experience. Se
 - Construct embedding vectors using **NVIDIA Embeddings (`NV-Embed-QA`)** and leverage **FAISS**, a powerful similarity search library, for swift and effective retrieval of relevant information.
 - Interact with the **NVIDIA-hosted `meta/llama3-8b-instruct` LLM** by inputting queries and receiving answers along with source URLs.
 - Enjoy a modern dashboard with animated progress indicators, processing metrics, and clean card-style answer presentation.
+
+---
+
+## 🎨 User Interface
+
+A clean, premium Streamlit dashboard with animated status steps, live processing metrics, and card-style answers:
+
+![News Research Tool UI](docs/app_screenshot.png)
+
+<!-- Drop your application screenshot at docs/app_screenshot.png (or update the path above). -->
 
 ---
 
@@ -100,3 +97,10 @@ Example news articles to try:
 - `requirements.txt` — A list of required Python packages for the project.
 - `faiss_store_openai.pkl` — A pickle file to store the FAISS index.
 - `.env` — Configuration file for storing your **NVIDIA API key** (not committed to version control).
+
+---
+
+## 👤 Author
+
+**Mithun Roy**
+AI and Machine Learning Engineer
