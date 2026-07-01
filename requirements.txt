@@ -15,7 +15,6 @@ langchain-nvidia-ai-endpoints==1.4.2
 faiss-cpu==1.14.3
 tiktoken==0.13.0
 
-# Article loading (UnstructuredURLLoader)
-unstructured==0.23.1
-python-magic==0.4.27
-python-magic-bin==0.4.14  # Windows: provides libmagic binaries for python-magic
+# Article loading & extraction
+requests==2.34.2
+trafilatura==2.1.0

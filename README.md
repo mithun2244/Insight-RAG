@@ -9,7 +9,7 @@ Built for speed and clarity, the tool combines state-of-the-art large language m
 ## ✨ Features
 
 - Load one or more article URLs to fetch and process content.
-- Process article content through LangChain's `UnstructuredURLLoader`.
+- Extract clean article text robustly with `requests` + `trafilatura` (browser User-Agent to bypass basic bot-blocking, with graceful per-URL failure reporting).
 - Construct embedding vectors using **NVIDIA Embeddings (`NV-Embed-QA`)** and leverage **FAISS**, a powerful similarity search library, for swift and effective retrieval of relevant information.
 - Interact with the **NVIDIA-hosted `meta/llama3-8b-instruct` LLM** by inputting queries and receiving answers along with source URLs.
 - Enjoy a modern dashboard with animated progress indicators, processing metrics, and clean card-style answer presentation.
