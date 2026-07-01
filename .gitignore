@@ -1,6 +1,9 @@
 # Secrets / environment
 .env
 
+# Generated FAISS index cache (rebuilt at runtime)
+faiss_store.pkl
+
 # Python
 __pycache__/
 *.py[cod]
