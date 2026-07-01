@@ -52,7 +52,7 @@ for i in range(3):
     urls.append(url)
 
 process_url_clicked = st.sidebar.button("Process URLs", type="primary", use_container_width=True)
-file_path = "faiss_store_openai.pkl"
+file_path = "faiss_store.pkl"
 
 llm = ChatNVIDIA(model="meta/llama3-8b-instruct", temperature=0.9, max_tokens=500)
 
