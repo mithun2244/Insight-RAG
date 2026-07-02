@@ -10,11 +10,51 @@ Built for speed and clarity, the tool combines state-of-the-art large language m
 
 ## ✨ Features
 
-- Load one or more article URLs to fetch and process content.
-- Extract clean article text robustly with `requests` + `trafilatura` (browser User-Agent to bypass basic bot-blocking, with graceful per-URL failure reporting).
-- Construct embedding vectors using **NVIDIA Embeddings (`NV-Embed-QA`)** and leverage **FAISS**, a powerful similarity search library, for swift and effective retrieval of relevant information.
-- Interact with the **NVIDIA-hosted `meta/llama-3.3-70b-instruct` LLM** by inputting queries and receiving answers along with source URLs.
-- Enjoy a modern dashboard with animated progress indicators, processing metrics, and clean card-style answer presentation.
+- **Web article scraping** — Fetches and extracts clean article text from any URL using `requests` with a browser User-Agent and `trafilatura`, bypassing basic bot-blocking with graceful per-URL failure handling.
+- **NVIDIA NIM API text embeddings** — Converts article chunks into dense semantic vectors via NVIDIA NIM (`NV-Embed-QA`), purpose-built for high-quality question-answering retrieval.
+- **FAISS vector similarity search** — Indexes embeddings in a FAISS vector store for fast, accurate nearest-neighbour retrieval of the most relevant passages.
+- **Sourced AI answers** — Uses the NVIDIA-hosted `meta/llama-3.3-70b-instruct` LLM to generate concise answers, each returned with its source URLs.
+- **Modern dashboard** — A polished Streamlit UI with animated progress steps, live processing metrics, and clean card-style answer presentation.
+
+---
+
+## 🛠️ Tech Stack
+
+- **Python** — Core application language.
+- **LangChain** — Orchestration of the retrieval-augmented generation pipeline.
+- **FAISS** — Vector store for similarity search.
+- **Streamlit** — Interactive web UI.
+- **NVIDIA AI Endpoints** — LLM (`meta/llama-3.3-70b-instruct`) and embeddings (`NV-Embed-QA`).
+
+---
+
+## ⚙️ Local Setup
+
+Get InsightRAG running on your machine in three steps.
+
+**1. Install the dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+**2. Configure your NVIDIA API key**
+
+Create a `.env` file in the project root and add your key:
+
+```bash
+NVIDIA_API_KEY=your_api_key_here
+```
+
+> 🔑 You can generate an API key from the [NVIDIA API Catalog](https://build.nvidia.com/). Keep your `.env` file private — it is excluded from version control via `.gitignore`.
+
+**3. Run the app**
+
+```bash
+streamlit run main.py
+```
+
+The app opens in your browser. Paste up to 3 article URLs in the sidebar, click **Process URLs**, then ask a question to get a sourced answer.
 
 ---
 
@@ -23,73 +63,6 @@ Built for speed and clarity, the tool combines state-of-the-art large language m
 A clean, premium Streamlit dashboard with animated status steps, live processing metrics, and card-style answers:
 
 ![InsightRAG UI](docs/app_screenshot.png)
-
-<!-- Drop your application screenshot at docs/app_screenshot.png (or update the path above). -->
-
----
-
-## 🛠️ Tech Stack
-
-- **LLM:** NVIDIA AI Endpoints — `meta/llama-3.3-70b-instruct` (via `ChatNVIDIA`)
-- **Embeddings:** NVIDIA — `NV-Embed-QA` (via `NVIDIAEmbeddings`)
-- **Framework:** LangChain
-- **Vector Store:** FAISS
-- **UI:** Streamlit
-
----
-
-## 🚀 Installation
-
-1. Clone this repository to your local machine:
-
-```bash
-git clone https://github.com/mithun2244/news-research-tool.git
-```
-
-2. Navigate to the project directory:
-
-```bash
-cd news-research-tool
-```
-
-3. Install the required dependencies using pip:
-
-```bash
-pip install -r requirements.txt
-```
-
-4. Set up your **NVIDIA API key** by creating a `.env` file in the project root and adding your key:
-
-```bash
-NVIDIA_API_KEY=your_api_key_here
-```
-
-> 🔑 You can generate an API key from the [NVIDIA API Catalog](https://build.nvidia.com/). Keep your `.env` file private — it is excluded from version control via `.gitignore`.
-
----
-
-## 💻 Usage/Examples
-
-1. Run the Streamlit app by executing:
-
-```bash
-streamlit run main.py
-```
-
-2. The web app will open in your browser.
-
-- On the sidebar, input up to 3 article URLs directly.
-- Initiate data loading and processing by clicking **"Process URLs"**.
-- Watch the animated status container as the system scrapes articles, generates NVIDIA embeddings, and builds the vector database.
-- Once complete, success metrics display the number of URLs loaded, text chunks created, and processing time.
-- The FAISS index is saved to a local pickle file for future use.
-- Ask a question and get an answer — presented in a clean card layout — based on those news articles, complete with sources.
-
-Example news articles to try:
-
-- https://www.moneycontrol.com/news/business/tata-motors-mahindra-gain-certificates-for-production-linked-payouts-11281691.html
-- https://www.moneycontrol.com/news/business/tata-motors-launches-punch-icng-price-starts-at-rs-7-1-lakh-11098751.html
-- https://www.moneycontrol.com/news/business/stocks/buy-tata-motors-target-of-rs-743-kr-choksey-11080811.html
 
 ---
 
