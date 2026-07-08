@@ -2,9 +2,9 @@
 
 🚀 **[Live Demo Available Here](https://insight-rag-c6tw84fxcj5bcvg77frjiu.streamlit.app)**
 
-**InsightRAG** is a production-ready retrieval-augmented generation (RAG) system for information retrieval across news articles. Paste in article URLs, ask questions in natural language, and receive concise, source-cited answers — powered by **NVIDIA AI Endpoints**.
+**InsightRAG** is a production-ready retrieval-augmented generation (RAG) system for grounded question answering over news articles. Given a set of article URLs, it ingests and indexes their content, then answers natural-language questions with concise, source-cited responses — powered by **NVIDIA AI Endpoints**.
 
-The application implements an agentic retrieval workflow that combines large language models with semantic vector search, converting unstructured news content into cited, verifiable answers.
+The system is built around an agentic retrieval workflow: incoming URLs are scraped and chunked, embedded into a FAISS vector index, and retrieved on demand to condition the language model at inference time. Each stage handles failures independently and returns source attributions alongside every answer, making the pipeline robust to unreliable inputs and its outputs traceable back to the underlying articles.
 
 ---
 
