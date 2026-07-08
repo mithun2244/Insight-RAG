@@ -2,9 +2,9 @@
 
 🚀 **[Live Demo Available Here](https://insight-rag-c6tw84fxcj5bcvg77frjiu.streamlit.app)**
 
-**InsightRAG** is a premium AI system for effortless information retrieval across news articles. Paste in article URLs, ask questions in natural language, and receive concise, sourced answers — powered by **NVIDIA AI Endpoints**.
+**InsightRAG** is a production-ready retrieval-augmented generation (RAG) system for information retrieval across news articles. Paste in article URLs, ask questions in natural language, and receive concise, source-cited answers — powered by **NVIDIA AI Endpoints**.
 
-Built for speed and clarity, the tool combines state-of-the-art large language models with fast semantic search to turn scattered news content into instant, cited insights.
+The application implements an agentic retrieval workflow that combines large language models with semantic vector search, converting unstructured news content into cited, verifiable answers.
 
 ---
 
@@ -14,7 +14,7 @@ Built for speed and clarity, the tool combines state-of-the-art large language m
 - **NVIDIA NIM API text embeddings** — Converts article chunks into dense semantic vectors via NVIDIA NIM (`NV-Embed-QA`), purpose-built for high-quality question-answering retrieval.
 - **FAISS vector similarity search** — Indexes embeddings in a FAISS vector store for fast, accurate nearest-neighbour retrieval of the most relevant passages.
 - **Sourced AI answers** — Uses the NVIDIA-hosted `meta/llama-3.3-70b-instruct` LLM to generate concise answers, each returned with its source URLs.
-- **Modern dashboard** — A polished Streamlit UI with animated progress steps, live processing metrics, and clean card-style answer presentation.
+- **Interactive dashboard** — A Streamlit UI with animated progress steps, live processing metrics, and card-style answer presentation.
 
 ---
 
@@ -60,7 +60,7 @@ The app opens in your browser. Paste up to 3 article URLs in the sidebar, click 
 
 ## 🎨 User Interface
 
-A clean, premium Streamlit dashboard with animated status steps, live processing metrics, and card-style answers:
+A Streamlit dashboard with animated status steps, live processing metrics, and card-style answers:
 
 ![InsightRAG UI](docs/app_screenshot.png)
 
